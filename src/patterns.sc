@@ -7,5 +7,5 @@ patterns:
     $cashwithdrawal = $regexp_i<^.*(снимать)|(снял)|(лимит)?.*$>
     $250 = $regexp_i<^.*(250\s?000)?.*$>
     $500 = $regexp_i<^.*(500\s?000)?.*$>
-    $millon = $regexp_i<^.*(1\s000\s?000)?.*$>
+    $million = $regexp_i<^.*(1\s000\s?000)?.*$>
     $freeservice = $regexp_i<^.*(мир)|(обслужива)|(народн)|(пользов)|(без платеж)?.*$>
