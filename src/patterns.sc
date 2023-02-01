@@ -12,4 +12,3 @@ patterns:
     $particles = (конечно)
     $yes = {([$particles] (да|даа|дааа))}
     $no = {[$particles] (не|нет|нету|неа)}
-
