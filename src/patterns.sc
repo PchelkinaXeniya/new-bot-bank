@@ -9,6 +9,6 @@ patterns:
     $500 = $regexp<500\s*000>
     $million = $regexp<1\s*000\s*000>
     $freeservice = (мир|обслуж*|народн*|пользов*|без платеж*)
-    $particles = (конечно)
-    $yes = {([$particles] (да|даа|дааа))}
+    $particles = (конечно|канешн*|однозначн*|определенн*|определённ*|разумеет*)
+    $yes = {([$particles] (да|даа|дааа|$particles))}
     $no = {[$particles] (не|нет|нету|неа)}
