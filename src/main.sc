@@ -102,10 +102,10 @@ theme: /
                 a: Банк «Рога и Копыта» предлагает клиентам карты системы «МИР» нескольких типов:
                    - Народная карта «МИР». Ознакомиться с условиями можно по ссылке: https://www.example.com
                    - Универсальная карта «МИР». Ознакомиться с условиями можно по ссылке: https://www.example.com
-                go!: /cardsGoal/whatIsImportant/freeService/step16 
+                go!: /cardsGoal/whatIsImportant/freeService/pensionMIR 
                 
                 #ШАГ16        
-                state: step16
+                state: pensionMIR
                     a: Если вы являетесь пенсионером, то предлагаю рассмотреть Пенсионную карту «МИР». Ознакомиться с тарифами можно на сайте: https://www.example.com
                     go!: /areYouReadyToOrderCard   
     
