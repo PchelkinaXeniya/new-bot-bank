@@ -10,7 +10,8 @@ patterns:
     $salary = (зарплат*|заработ*|зп)
     $profit = (летел*|выгод*)
     $payments = (заплат*|опла*)
-    $cashback = (кеш*|кэш*|cash-back)
+    #$cashback = (кеш бек|кэш бек|кэш бэк|кешбек|кэшбек|кэшбэк|cash-back|cash back|cash back)
+    $cashback = $regexp_i<(к[е,э,а,ы]ш(\s*|-)б[е,э,а,ы]к|c[a,e]sh(\s*|-)b[a,e]ck)>
     $gets = (снят*|снима*|снял*)
     $limits = (лимит*|димит*|дофиг*|сколько (хоч*|нужн*|надо))
     $250 = $regexp<250\s*000>
