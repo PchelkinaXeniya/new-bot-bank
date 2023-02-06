@@ -17,8 +17,8 @@ theme: /
             
         #ШАГ3        
         state: socialPayments
-            q: * $socialpayments *
-            q!: * {[$wants] * $socialpayments * ($order | $design | $card)} *
+            q: * $socialPayments *
+            q!: * {[$wants] * $socialPayments * ($order | $design | $card)} *
             a: В соответствии с законодательством (161 ФЗ) выплаты должны осуществляться на карты национальной платежной системы "МИР".
                Банк «Рога и Копыта» предлагает клиентам карты системы (МИР) типов.<br/>
                Народная карта МИР. Ознакомиться с условиями можно по ссылке: https://www.example.com<br/>
@@ -34,8 +34,8 @@ theme: /
 
         #ШАГ5    
         state: whatIsImportant
-            q: * {$payments * $salary * $paymentCards} *
-            q!: * {[$wants] * $card} *
+            q: * ($payments * $salary * $paymentCards) *
+            q!: * {[$wants] * $card * ($payments * $salary * $paymentCards)} *
             a: Укажите, что для вас важнее:<br/>
                -кешбэк;<br/> 
                -начисление процентов на остаток;<br/>
@@ -43,8 +43,8 @@ theme: /
     
             #ШАГ6
             state: cashback
-                #q!: * $cashback *
-                #q: * {$cashback * $card} *
+                q!: * $cashback *
+                q: * {[$wants] * $cashback * $card} *
                 a: Предлагаю рассмотреть Универсальную карту (MasterCard/ VISA). Ознакомиться с условиями можно на нашем официальном сайте: https://www.example.com
                 go!: /cardsGoal/whatIsImportant/premialCads
                 
@@ -55,8 +55,8 @@ theme: /
             
             #ШАГ8
             state: cashWithDrawal
-                #q: * $cashwithdrawal *
-                #q!: * {$cashwithdrawal * $card} *
+                q: * $limits *
+                q!: * {[$wants] * $limits * $card} *
                 a: На каждом тарифном плане установлены лимиты на снятие собственных денежных средств без комиссии в месяц. Укажите, какие лимиты вас интересуют:<br/>
                    - снятие до 250 000 руб. в месяц без комиссии;<br/>
                    - снятие до 500 000 руб. в месяц без комиссии;<br/>
@@ -97,8 +97,8 @@ theme: /
                    
             #ШАГ15        
             state: freeService
-                #q: * $freeservice *
-                #q!: * {$freeservice * $card} *
+                q: * ($freePaymentCards | $application | $free)*
+                q!: * {[$wants] * ($order | $design | $card) * ($freePaymentCards | $application | $free)} *
                 a: Банк «Рога и Копыта» предлагает клиентам карты системы «МИР» нескольких типов:
                    - Народная карта «МИР». Ознакомиться с условиями можно по ссылке: https://www.example.com
                    - Универсальная карта «МИР». Ознакомиться с условиями можно по ссылке: https://www.example.com
